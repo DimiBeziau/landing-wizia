@@ -4,12 +4,13 @@
   --color-wizia-pink: #FF8FB1;
   --color-wizia-purple: #B2A4FF;
   --color-wizia-cyan: #86E5FF;
-  
+
   --font-sans: var(--font-outfit), sans-serif;
 }
 
 :root {
-  --background: #020617; /* slate-950 */
+  --background: #020617;
+  /* slate-950 */
   --foreground: #ffffff;
 }
 
@@ -19,9 +20,17 @@ body {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
@@ -34,4 +43,6 @@ body {
 
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-wizia-pink via-wizia-purple to-wizia-cyan;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
