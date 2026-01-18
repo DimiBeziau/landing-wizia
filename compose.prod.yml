@@ -1,0 +1,14 @@
+services:
+  web:
+    # REMPLACEZ 'ghcr.io/votre-user/votre-repo' PAR L'IMAGE CORRECTE
+    # Cette image doit correspondre à celle pushée par le workflow GitHub Actions
+    image: ghcr.io/${REPO_SLUG}:latest
+    container_name: landing-wizia-prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # Ajoutez ici d'autres variables d'environnement nécessaires (ex: MAIL_HOST, etc.)
+    env_file:
+      - .env
+    restart: always
