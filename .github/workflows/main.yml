@@ -63,7 +63,7 @@ jobs:
           key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
           port: ${{ secrets.DEPLOY_PORT }}
           script: |
-            cd /home/${{ secrets.DEPLOY_USER }}/Documents/landing-wizia
+            cd /home/${{ secrets.DEPLOY_USER }}/DockerApps/landing-wizia
             docker compose pull
             docker compose down
             docker compose up -d
